@@ -7,33 +7,15 @@
 </div>
 <hr>
 <div class="row ">
-  <!-- <div class="card" *ngFor= "let recipe of recipes" style="width: 18rem;">
-    <img class="card-img-top img-responsive" style="max-height: 250px;" [src]="recipe.imagePath" alt="{{recipe.name}}">
-    <div class="card-body">
-      <h5 class="card-title">{{recipe.name}}</h5>
-      <h6 class="card-subtitle mb-2 text-muted">{{recipe.description}}</h6>
-    </div>
-  </div> -->
- <!-- <div class=""> -->
-  <a href="#" class="col-md-12 list-group-item" *ngFor="let recipe of recipes">
-   <div class="row">
-    <div class="col-md-6 ">
-      <h4>{{recipe.name}}</h4>
-      <p>{{recipe.description}}</p>
-          </div>
-          <div class="col-md-6">
-            <img
-            [src] = "recipe.imagePath"
-            alt="{{ recipe.name }}"
-            class="img-responsive"
-            style="max-height: 100px; float: right;">
-          </div>
-   </div>
-  </a>
+
+  <app-recipe-item 
+   *ngFor="let recipeEl of recipes"
+  [recipe]="recipeEl"
+  (recipeSelected)="OnRecipeSelected(recipeEl)"></app-recipe-item>
+
  <!-- </div> -->
   </div>
-    <app-recipe-item></app-recipe-item>
-
+   
 
 
  

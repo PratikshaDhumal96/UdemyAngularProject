@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model'
 
 @Component({
   selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
-  styleUrls: ['./shopping-list.component.css']
+  styleUrls: ['./shopping-list.component.css'],
+  // encapsulation: ViewEncapsulation.Emulated
 })
 export class ShoppingListComponent implements OnInit {
   ingredients : Ingredient[]= [
@@ -16,6 +17,10 @@ export class ShoppingListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+  newIngredientAdded(ingerdient : Ingredient){
+    this.ingredients.push(ingerdient)
+
   }
 
 }
