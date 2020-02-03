@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { PracticeDirectivesComponent } from './practice-directives/practice-directives.component';
 import { BasicHighlightDirectiveDirective } from './basic-highlight/basic-highlight-directive.directive';
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
+import { UnlessDirective } from './unless.directive';
+import { Inless2Directive } from './inless2.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     PracticeDirectivesComponent,
     BasicHighlightDirectiveDirective,
-    BetterHighlightDirective
+    BetterHighlightDirective,
+    UnlessDirective,
+    Inless2Directive
   ],
   imports: [
     BrowserModule,
